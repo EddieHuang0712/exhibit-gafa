@@ -207,10 +207,10 @@ export default function Operate() {
                             <p>广州美术学院</p>
                             <p>科智媒体艺术中心</p>
                         </div>
-                        <div className="fixed top-[83%] right-[5%] text-[1.2vw] text-[#FFE600] text-right">
+                        <div className="fixed bottom-[7%] right-[5%] text-[1.2vw] text-[#FFE600] text-right">
                             2024
                         </div>
-                        <div className="fixed top-[17%] left-[5%] text-[1.2vw] w-fit h-fit overflow-hidden">
+                        <div className="fixed top-[17%] left-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-black">
                             <p>档案编号:2024-Y-0012</p><br/>
                             <p>受访者-杨女士</p>
                             <p>年龄-42岁</p>
@@ -219,7 +219,7 @@ export default function Operate() {
                             <p>居住地址-广州某城中村自建房3楼集体宿舍</p>
                             <div className="absolute top-0 left-[100%] w-full h-full bg-white animate-slideRight"/>
                         </div>
-                        <div className="fixed top-[55%] left-[5%] text-[1.2vw] w-fit h-fit overflow-hidden">
+                        <div className="fixed top-[52%] left-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-black">
                             <p>居住感受-</p>
                             <p>今年三月份来这里的餐厅工作</p>
                             <p>被分配到这个宿舍</p>
@@ -235,24 +235,23 @@ export default function Operate() {
                             <p>买小吃</p>
                             <div className="absolute top-0 left-[100%] w-full h-full bg-white animate-slideRight"/>
                         </div>
-                        <div className="fixed top-[32%] right-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-right">
+                        <div className="fixed top-[32%] right-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-right text-black">
                             <p>记忆物品-</p>
                             <p>工衣</p>
                             <p>梳妆镜</p>
                             <div className="absolute top-0 right-[100%] w-full h-full bg-white animate-slideLeft"/>
                         </div>
-                        <div className="fixed top-[45%] right-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-right">
-
+                        <div className="fixed top-[45%] right-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-right text-black">
                             <p>房屋规格-三房一厅</p>
                             <p>租金-700/月</p>
                             <div className="absolute top-0 right-[100%] w-full h-full bg-white animate-slideLeft"/>
                         </div>
-                        <div className="fixed top-[56%] right-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-right">
+                        <div className="fixed top-[56%] right-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-right text-black">
                             <p>预估受光面积-20平方米/83平方米</p>
                             <p>预估受光时间-6小时/天</p>
                             <div className="absolute top-0 right-[100%] w-full h-full bg-white animate-slideLeft"/>
                         </div>
-                        <div className="fixed top-[68%] right-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-right">
+                        <div className="fixed top-[68%] right-[5%] text-[1.2vw] w-fit h-fit overflow-hidden text-right text-black">
                             <p>未来期待-</p>
                             <p>好好上班供儿子女儿上学</p>
                             <p>让孩子过得更好，多读点书</p>
