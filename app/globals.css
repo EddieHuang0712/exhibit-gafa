@@ -30,8 +30,14 @@ body {
     }
 
   main {
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    scrollbar-width: none;
     div {
       &::-webkit-scrollbar {
+        display: none;
         width: 0;
       }
       scrollbar-width: none;
