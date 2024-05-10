@@ -48,7 +48,7 @@ export default function Exhibit() {
     }, []);
 
     return (
-        <main className="flex w-screen h-screen flex-col items-center justify-between bg-white px-[6vw] py-[5vw]">
+        <main className="flex w-screen h-screen flex-col items-center justify-between bg-transparent px-[6vw] py-[5vw]">
             <div
                 className={`relative w-full h-full flex flex-wrap ${num === 0 ? 'justify-between' : 'justify-center'} items-center gap-6`}>
                 <VideoContainer
