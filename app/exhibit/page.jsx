@@ -13,7 +13,7 @@ const VideoContainer = ({index, className, isPlayed}) => {
                 isPlayed ?
                     <video className="w-full h-full" src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/video${12}.mp4`} autoPlay={true} loop={true}/>
                     :
-                    <img className="w-full h-full bg-[#d9d9d9]" src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gifs/gafa-video1.gif`} alt={`${index}`}/>
+                    <img className="w-full h-full bg-[#d9d9d9]" src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gifs/test.gif`} alt={`${index}`}/>
             }
         </div>
     )
