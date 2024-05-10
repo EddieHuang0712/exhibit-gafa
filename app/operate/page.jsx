@@ -68,7 +68,7 @@ export default function Operate() {
 
     const handleClick = async (num) => {
         setSelectedId(num)
-        if (selectedId === num || (selectedId !== num && num === 0)) {
+        if ((selectedId === num && num !== 0) || (selectedId !== num && num === 0)) {
             if (isTextShowed) {
                 setIsTextShowed(false)
                 setSelectedId(0)
