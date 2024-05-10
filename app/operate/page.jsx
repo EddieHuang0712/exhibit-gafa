@@ -84,7 +84,7 @@ export default function Operate() {
                 } catch (e) {
                     console.error('failed to push data');
                 }
-            } else {
+            } else if (num !== 0) {
                 setIsTextShowed(true)
             }
         } else {
