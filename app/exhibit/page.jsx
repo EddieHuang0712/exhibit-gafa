@@ -62,59 +62,72 @@ export default function Exhibit() {
                     className={`${num === 0 ? 'top-[0] left-[25.33%] w-[23.5%]' : num === 2 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 3}
                     index={3}
                     className={`${num === 0 ? 'top-[0] left-[50.66%] w-[23.5%]' : num === 3 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 4}
                     index={4}
                     className={`${num === 0 ? 'top-[0] left-[76%] w-[23.5%]' : num === 4 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 5}
                     index={5}
                     className={`${num === 0 ? 'top-[12vw] left-[0%] w-[23.5%]' : num === 5 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 6}
                     index={6}
                     className={`${num === 0 ? 'top-[12vw] left-[25.33%] w-[23.5%]' : num === 6 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 7}
                     index={7}
                     className={`${num === 0 ? 'top-[12vw] left-[50.66%] w-[23.5%]' : num === 7 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 8}
                     index={8}
                     className={`${num === 0 ? 'top-[12vw] left-[76%] w-[23.5%]' : num === 8 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 9}
                     index={9}
                     className={`${num === 0 ? 'top-[24vw] left-[0%] w-[23.5%]' : num === 9 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 10}
                     index={10}
                     className={`${num === 0 ? 'top-[24vw] left-[25.33%] w-[23.5%]' : num === 10 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 11}
                     index={11}
                     className={`${num === 0 ? 'top-[24vw] left-[50.66%] w-[23.5%]' : num === 11 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
-                    index={12}
                     isPlayed={num === 12}
+                    index={12}
                     className={`${num === 0 ? 'top-[24vw] left-[76%] w-[23.5%]' : num === 12 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 13}
                     index={13}
                     className={`${num === 0 ? 'top-[36vw] left-[0%] w-[23.5%]' : num === 13 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 14}
                     index={14}
                     className={`${num === 0 ? 'top-[36vw] left-[25.33%] w-[23.5%]' : num === 14 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 15}
                     index={15}
                     className={`${num === 0 ? 'top-[36vw] left-[50.66%] w-[23.5%]' : num === 15 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
                 <VideoContainer
+                    isPlayed={num === 16}
                     index={16}
                     className={`${num === 0 ? 'top-[36vw] left-[76%] w-[23.5%]' : num === 16 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
                 />
