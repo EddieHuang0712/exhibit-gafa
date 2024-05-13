@@ -6,20 +6,28 @@ const VideoContainer = ({index, className, isPlayed}) => {
     return (
         <div
             className={clsx(
-                `absolute aspect-[1.98] transition-all duration-700 animate-fadeIn`,
+                `flex items-center justify-center absolute w-[23.5%] aspect-[1.78] bg-white transition-all duration-700 animate-fadeIn`,
                 className)}
         >
+            {/*{*/}
+            {/*    isPlayed ?*/}
+            {/*        <video className="w-full h-full"*/}
+            {/*               src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/video${index}.mp4`} autoPlay={true}*/}
+            {/*               loop={true}/>*/}
+            {/*        :*/}
+            {/*        <video className="w-full h-full"*/}
+            {/*               src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/video${index}.mp4`} autoPlay={true} muted={true}*/}
+            {/*               loop={true}/>*/}
+            {/*    // <img className="w-full h-full bg-[#d9d9d9]" src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/gafa-video${index}.gif`} alt={`${index}`}/>*/}
+            {/*}*/}
             {
-                isPlayed ?
-                    <video className="w-full h-full"
-                           src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/video${index}.mp4`} autoPlay={true}
-                           loop={true}/>
-                    :
-                    <video className="w-full h-full"
-                           src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/video${index}.mp4`} autoPlay={true} muted={true}
-                           loop={true}/>
-                // <img className="w-full h-full bg-[#d9d9d9]" src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/gafa-video${index}.gif`} alt={`${index}`}/>
+                <video className={`${isPlayed ? 'w-full' : 'w-fit'} h-full`}
+                       src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/video${index}.mp4`} autoPlay={true}
+                       loop={true} muted={!isPlayed}/>
             }
+            {/*<div className="h-full w-[120%] bg-black">*/}
+
+            {/*</div>*/}
         </div>
     )
 }
@@ -53,88 +61,88 @@ export default function Exhibit() {
     }, []);
 
     return (
-        <main className="flex w-screen h-screen flex-col items-center justify-between bg-transparent px-[6vw] py-[5vw]">
+        <main className="flex w-screen h-screen flex-col items-center justify-between bg-transparent px-[6vw] py-[3vw]">
             <div
                 className={`relative w-full h-full flex flex-wrap ${num === 0 ? 'justify-between' : 'justify-center'} items-center gap-6`}>
                 <VideoContainer
                     isPlayed={num === 1}
                     index={1}
-                    className={`${num === 0 ? 'top-[0] left-[0%] w-[23.5%]' : num === 1 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[0] left-[0%] w-[23.5%]' : num === 1 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[0] left-[0%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 2}
                     index={2}
-                    className={`${num === 0 ? 'top-[0] left-[25.33%] w-[23.5%]' : num === 2 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[0] left-[25.33%] w-[23.5%]' : num === 2 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[0] left-[25.33%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 3}
                     index={3}
-                    className={`${num === 0 ? 'top-[0] left-[50.66%] w-[23.5%]' : num === 3 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[0] left-[50.66%] w-[23.5%]' : num === 3 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[0] left-[50.66%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 4}
                     index={4}
-                    className={`${num === 0 ? 'top-[0] left-[76%] w-[23.5%]' : num === 4 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[0] left-[76%] w-[23.5%]' : num === 4 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[0] left-[76%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 5}
                     index={5}
-                    className={`${num === 0 ? 'top-[12vw] left-[0%] w-[23.5%]' : num === 5 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[13vw] left-[0%] w-[23.5%]' : num === 5 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[13vw] left-[0%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 6}
                     index={6}
-                    className={`${num === 0 ? 'top-[12vw] left-[25.33%] w-[23.5%]' : num === 6 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[13vw] left-[25.33%] w-[23.5%]' : num === 6 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[13vw] left-[25.33%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 7}
                     index={7}
-                    className={`${num === 0 ? 'top-[12vw] left-[50.66%] w-[23.5%]' : num === 7 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[13vw] left-[50.66%] w-[23.5%]' : num === 7 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[13vw] left-[50.66%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 8}
                     index={8}
-                    className={`${num === 0 ? 'top-[12vw] left-[76%] w-[23.5%]' : num === 8 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[13vw] left-[76%] w-[23.5%]' : num === 8 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[13vw] left-[76%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 9}
                     index={9}
-                    className={`${num === 0 ? 'top-[24vw] left-[0%] w-[23.5%]' : num === 9 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[26vw] left-[0%] w-[23.5%]' : num === 9 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[26vw] left-[0%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 10}
                     index={10}
-                    className={`${num === 0 ? 'top-[24vw] left-[25.33%] w-[23.5%]' : num === 10 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[26vw] left-[25.33%] w-[23.5%]' : num === 10 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[26vw] left-[25.33%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 11}
                     index={11}
-                    className={`${num === 0 ? 'top-[24vw] left-[50.66%] w-[23.5%]' : num === 11 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[26vw] left-[50.66%] w-[23.5%]' : num === 11 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[26vw] left-[50.66%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 12}
                     index={12}
-                    className={`${num === 0 ? 'top-[24vw] left-[76%] w-[23.5%]' : num === 12 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[26vw] left-[76%] w-[23.5%]' : num === 12 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[26vw] left-[76%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 13}
                     index={13}
-                    className={`${num === 0 ? 'top-[36vw] left-[0%] w-[23.5%]' : num === 13 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[39vw] left-[0%] w-[23.5%]' : num === 13 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[39vw] left-[0%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 14}
                     index={14}
-                    className={`${num === 0 ? 'top-[36vw] left-[25.33%] w-[23.5%]' : num === 14 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[39vw] left-[25.33%] w-[23.5%]' : num === 14 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[39vw] left-[25.33%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 15}
                     index={15}
-                    className={`${num === 0 ? 'top-[36vw] left-[50.66%] w-[23.5%]' : num === 15 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[39vw] left-[50.66%] w-[23.5%]' : num === 15 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[39vw] left-[50.66%] w-[23.5%] opacity-0'}`}
                 />
                 <VideoContainer
                     isPlayed={num === 16}
                     index={16}
-                    className={`${num === 0 ? 'top-[36vw] left-[76%] w-[23.5%]' : num === 16 ? 'top-[5vw] left-[10%] w-[80%]' : 'hidden opacity-0'}`}
+                    className={`${num === 0 ? 'top-[39vw] left-[76%] w-[23.5%]' : num === 16 ? 'top-[5vw] left-[10%] w-[80%]' : 'top-[39vw] left-[76%] w-[23.5%] opacity-0'}`}
                 />
             </div>
         </main>

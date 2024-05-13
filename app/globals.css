@@ -42,6 +42,9 @@ body {
       }
       scrollbar-width: none;
     }
+    p {
+      margin-bottom: 3px;
+    }
   }
 }
 
