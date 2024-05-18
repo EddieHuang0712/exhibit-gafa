@@ -59,9 +59,9 @@ export default function Operate() {
 
     useEffect(() => {
         if (selectedId > 0) {
-            containerRef.current.style.width = '100%'
+            containerRef.current.children[0].style.width = '100%'
         } else {
-            containerRef.current.style.width = '30%'
+            containerRef.current.children[0].style.width = '30%'
         }
         if (selectedRef.current) {
             if (selectedId > 0) {
@@ -72,7 +72,6 @@ export default function Operate() {
             const containerRect = containerRef.current.getBoundingClientRect();
             const selectedRect = selectedRef.current.getBoundingClientRect();
             const scrollPosition = selectedRect.top - containerRect.top - containerRect.height / 2 + selectedRect.height / 2;
-            console.log(scrollPosition, selectedRef.current, containerRef.current.scrollTop, selectedRect, containerRect)
             containerRef.current.scrollTo({
                 top: containerRef.current.scrollTop + scrollPosition,
                 behavior: 'smooth',
@@ -80,14 +79,11 @@ export default function Operate() {
         }
     }, [selectedId]);
 
-    console.log(preRef)
-
     useEffect(() => {
         if (preRef.current) {
             const containerRect = containerRef.current.getBoundingClientRect();
             const preRect = preRef.current.getBoundingClientRect();
             const scrollPosition = preRect.top - containerRect.top - containerRect.height / 2 + preRect.height / 2;
-            console.log(scrollPosition, preRef.current, containerRef.current.scrollTop, preRect, containerRect, 'preRef')
             containerRef.current.scrollTo({
                 top: containerRef.current.scrollTop + scrollPosition,
                 behavior: 'smooth',
@@ -95,7 +91,8 @@ export default function Operate() {
         }
     },[preId])
 
-    const handleClick = async (num) => {
+    const handleClick = async (event, num) => {
+        event.stopPropagation();
         setSelectedId(num)
         if ((selectedId === num && num !== 0) || (selectedId !== num && num === 0)) {
             if (isTextShowed) {
@@ -148,142 +145,100 @@ export default function Operate() {
         }
     }
 
-//     function addPTags(text) {
-//         const lines = text.split('\n');
-//         let result = '';
-//
-//         for (const line of lines) {
-//             result += `<p>${line}</p>\n`;
-//         }
-//
-//         return result;
-//     }
-//
-//     const text = `深刻记忆-
-// 我觉得在这里大家很和谐
-// 因为艺术家多嘛，氛围也好
-// 并且物价也低呀，二十块钱就可以吃的很好
-// 在那里我觉得我的效率特别的高
-// 可能在家里一个月才能画完的画一个星期就画完了
-// 现在也还是很怀念住在城中村的时光，在那里住了十多年了
-// 而且这个城市印象最好的就是在城中村了
-// 在那里我觉得我浮躁的心得到了洗涤
-// 创作没人打扰很容易进入心流状态
-// 每次听到画笔在纸上的沙沙声
-// 我都觉得很享受像是一种修行，比起繁华大都市
-// 我更加喜欢所谓的城中村
-// 记忆物品-
-// 画作
-// 我觉得最能代表我的就是我再这边创作的作品吧，尤其是我前几年的工笔
-// 我自己也很满意，在这里像是一种修行
-// 搬离原因-
-// 主要是因为疫情原因，当时想过去住
-// 但房东每次都说先不要过来，不让外省进
-// 然后疫情期间又多了很多的自由时间
-// 我就在湖南这边自己租了一个工作室搞创作
-// 我觉得这边好像也住习惯了
-// 那边也去得少，还要交租金，后来去年我就把那边房子退了`;
-//
-//     const formattedText = addPTags(text);
-//     console.log(formattedText);
-
     return (
         <main
             className="relative h-screen bg-white">
             <div
-                className={`flex relative flex-col w-[30%] h-full mx-auto items-center ${selectedId === 0 ? 'overflow-auto': 'overflow-hidden'} py-16 ${selectedId === 0 ? 'transition-all duration-500 ease-in-out' : ''}`}
+                onClick={(event) => handleClick(event,0)}
+                className={`flex relative flex-col w-full h-full mx-auto items-center ${selectedId === 0 ? 'overflow-auto': 'overflow-hidden'} py-16 ${selectedId === 0 ? 'transition-all duration-500 ease-in-out' : ''}`}
                 ref={containerRef}
             >
-                <div
-                    onClick={() => handleClick(0)}
-                    className="fixed w-screen h-full z-0">
-                </div>
-                <>
+                <div className="flex flex-col w-[30%] h-fit items-center">
                     <FloorButton
                         id={12}
                         className="w-[40%] mt-[0%] z-[12]"
                         ref={selectedId === 12 ? selectedRef : preId === 12 ? preRef : null}
-                        onClick={() => handleClick(12)}
+                        onClick={(event) => handleClick(event, 12)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={11}
                         className="w-[40%] mt-[-4%] z-[11]"
                         ref={selectedId === 11 ? selectedRef : preId === 11 ? preRef : null}
-                        onClick={() => handleClick(11)}
+                        onClick={(event) => handleClick(event, 11)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={10}
                         className="w-[40%] mt-[-7%] z-[10]"
                         ref={selectedId === 10 ? selectedRef : preId === 10 ? preRef : null}
-                        onClick={() => handleClick(10)}
+                        onClick={(event) => handleClick(event, 10)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={9}
                         className="w-[39%] mt-[-7%] z-[9]"
                         ref={selectedId === 9 ? selectedRef : preId === 9 ? preRef : null}
-                        onClick={() => handleClick(9)}
+                        onClick={(event) => handleClick(event, 9)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={8}
                         className="w-[38%] mt-[-7%] z-[8]"
                         ref={selectedId === 8 ? selectedRef : preId === 8 ? preRef : null}
-                        onClick={() => handleClick(8)}
+                        onClick={(event) => handleClick(event, 8)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={7}
                         className="w-[37%] mt-[-7%] z-[7]"
                         ref={selectedId === 7 ? selectedRef : preId === 7 ? preRef : null}
-                        onClick={() => handleClick(7)}
+                        onClick={(event) => handleClick(event, 7)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={6}
                         className="w-[36%] mt-[-7%] z-[6]"
                         ref={selectedId === 6 ? selectedRef : preId === 6 ? preRef : null}
-                        onClick={() => handleClick(6)}
+                        onClick={(event) => handleClick(event, 6)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={5}
                         className="w-[35%] mt-[-7%] z-[5]"
                         ref={selectedId === 5 ? selectedRef : preId === 5 ? preRef : null}
-                        onClick={() => handleClick(5)}
+                        onClick={(event) => handleClick(event, 5)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={4}
                         className="w-[34%] mt-[-7%] z-[4]"
                         ref={selectedId === 4 ? selectedRef : preId === 4 ? preRef : null}
-                        onClick={() => handleClick(4)}
+                        onClick={(event) => handleClick(event, 4)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={3}
                         className="w-[33%] mt-[-7%] z-[3]"
                         ref={selectedId === 3 ? selectedRef : preId === 3 ? preRef : null}
-                        onClick={() => handleClick(3)}
+                        onClick={(event) => handleClick(event, 3)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={2}
                         className="w-[32%] mt-[-7%] z-[2]"
                         ref={selectedId === 2 ? selectedRef : preId === 2 ? preRef : null}
-                        onClick={() => handleClick(2)}
+                        onClick={(event) => handleClick(event, 2)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={1}
                         className="w-[31%] mt-[-7%] z-[1]"
                         ref={selectedId === 1 ? selectedRef : preId === 1 ? preRef : null}
-                        onClick={() => handleClick(1)}
+                        onClick={(event) => handleClick(event, 1)}
                     >
                     </FloorButton>
-                </>
+                </div>
                 {isTextShowed && selectedId === 12 &&
                     <>
                         <IntervieweeInfo>
