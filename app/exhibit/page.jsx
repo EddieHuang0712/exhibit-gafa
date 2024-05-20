@@ -22,7 +22,7 @@ const VideoContainer = ({index, className, isPlayed}) => {
             {/*}*/}
             {
                 <video className={`${isPlayed ? 'w-full' : 'w-fit'} h-full`}
-                       src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/video${index}.mp4`} autoPlay={true}
+                       src={`https://eddiehuang.oss-cn-guangzhou.aliyuncs.com/gafa/${index}.mp4`} autoPlay={true}
                        loop={true} muted={!isPlayed}/>
             }
             {/*<div className="h-full w-[120%] bg-black">*/}
