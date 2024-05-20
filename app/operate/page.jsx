@@ -67,7 +67,7 @@ export default function Operate() {
             if (selectedId > 0) {
                 selectedRef.current.style.width = '40%'
             } else {
-                selectedRef.current.style.width = selectedId <= 10 ? `${40 - 10 + selectedId}%` : '40%'
+                selectedRef.current.style.width = selectedRef.current.id <= 10 ? `${40 - 10 + selectedRef.current.id}%` : '40%'
             }
             const containerRect = containerRef.current.getBoundingClientRect();
             const selectedRect = selectedRef.current.getBoundingClientRect();
@@ -157,57 +157,57 @@ export default function Operate() {
                     <FloorButton
                         id={12}
                         className="w-[40%] mt-[0%] z-[12]"
-                        ref={selectedId === 12 ? selectedRef : preId === 12 ? preRef : null}
-                        onClick={(event) => handleClick(event, 12)}
+                        ref={selectedId === 16 ? selectedRef : preId === 16 ? preRef : null}
+                        onClick={(event) => handleClick(event, 16)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={11}
                         className="w-[40%] mt-[-4%] z-[11]"
-                        ref={selectedId === 11 ? selectedRef : preId === 11 ? preRef : null}
-                        onClick={(event) => handleClick(event, 11)}
+                        ref={selectedId === 15 ? selectedRef : preId === 15 ? preRef : null}
+                        onClick={(event) => handleClick(event, 15)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={10}
                         className="w-[40%] mt-[-7%] z-[10]"
-                        ref={selectedId === 10 ? selectedRef : preId === 10 ? preRef : null}
-                        onClick={(event) => handleClick(event, 10)}
+                        ref={selectedId === 14 ? selectedRef : preId === 14 ? preRef : null}
+                        onClick={(event) => handleClick(event, 14)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={9}
                         className="w-[39%] mt-[-7%] z-[9]"
-                        ref={selectedId === 9 ? selectedRef : preId === 9 ? preRef : null}
-                        onClick={(event) => handleClick(event, 9)}
+                        ref={selectedId === 13 ? selectedRef : preId === 13 ? preRef : null}
+                        onClick={(event) => handleClick(event, 13)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={8}
                         className="w-[38%] mt-[-7%] z-[8]"
-                        ref={selectedId === 8 ? selectedRef : preId === 8 ? preRef : null}
-                        onClick={(event) => handleClick(event, 8)}
+                        ref={selectedId === 11 ? selectedRef : preId === 11 ? preRef : null}
+                        onClick={(event) => handleClick(event, 11)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={7}
                         className="w-[37%] mt-[-7%] z-[7]"
-                        ref={selectedId === 7 ? selectedRef : preId === 7 ? preRef : null}
-                        onClick={(event) => handleClick(event, 7)}
+                        ref={selectedId === 10 ? selectedRef : preId === 10 ? preRef : null}
+                        onClick={(event) => handleClick(event, 10)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={6}
                         className="w-[36%] mt-[-7%] z-[6]"
-                        ref={selectedId === 6 ? selectedRef : preId === 6 ? preRef : null}
-                        onClick={(event) => handleClick(event, 6)}
+                        ref={selectedId === 7 ? selectedRef : preId === 7 ? preRef : null}
+                        onClick={(event) => handleClick(event, 7)}
                     >
                     </FloorButton>
                     <FloorButton
                         id={5}
                         className="w-[35%] mt-[-7%] z-[5]"
-                        ref={selectedId === 5 ? selectedRef : preId === 5 ? preRef : null}
-                        onClick={(event) => handleClick(event, 5)}
+                        ref={selectedId === 6 ? selectedRef : preId === 6 ? preRef : null}
+                        onClick={(event) => handleClick(event, 6)}
                     >
                     </FloorButton>
                     <FloorButton
@@ -239,7 +239,7 @@ export default function Operate() {
                     >
                     </FloorButton>
                 </div>
-                {isTextShowed && selectedId === 12 &&
+                {isTextShowed && selectedId === 16 &&
                     <>
                         <IntervieweeInfo>
                             <InfoBlock className="top-[17%] left-[4%]">
@@ -288,7 +288,7 @@ export default function Operate() {
                         </IntervieweeInfo>
                     </>
                 }
-                {isTextShowed && selectedId === 11 &&
+                {isTextShowed && selectedId === 15 &&
                     <>
                         <IntervieweeInfo>
                             <InfoBlock className="top-[17%] left-[4%]">
@@ -339,7 +339,7 @@ export default function Operate() {
                         </IntervieweeInfo>
                     </>
                 }
-                {isTextShowed && selectedId === 10 &&
+                {isTextShowed && selectedId === 14 &&
                     <>
                         <IntervieweeInfo>
                             <InfoBlock className="top-[17%] left-[4%]">
@@ -395,7 +395,7 @@ export default function Operate() {
                         </IntervieweeInfo>
                     </>
                 }
-                {isTextShowed && selectedId === 9 &&
+                {isTextShowed && selectedId === 13 &&
                     <>
                         <IntervieweeInfo>
                             <InfoBlock className="top-[17%] left-[4%]">
@@ -452,7 +452,7 @@ export default function Operate() {
                         </IntervieweeInfo>
                     </>
                 }
-                {isTextShowed && selectedId === 8 &&
+                {isTextShowed && selectedId === 11 &&
                     <>
                         <IntervieweeInfo>
                             <InfoBlock className="top-[17%] left-[4%]">
@@ -501,7 +501,7 @@ export default function Operate() {
                         </IntervieweeInfo>
                     </>
                 }
-                {isTextShowed && selectedId === 7 &&
+                {isTextShowed && selectedId === 10 &&
                     <>
                         <IntervieweeInfo>
                             <InfoBlock className="top-[17%] left-[4%]">
@@ -550,7 +550,7 @@ export default function Operate() {
                         </IntervieweeInfo>
                     </>
                 }
-                {isTextShowed && selectedId === 6 &&
+                {isTextShowed && selectedId === 7 &&
                     <>
                         <IntervieweeInfo>
                             <InfoBlock className="top-[17%] left-[4%]">
@@ -599,7 +599,7 @@ export default function Operate() {
                         </IntervieweeInfo>
                     </>
                 }
-                {isTextShowed && selectedId === 5 &&
+                {isTextShowed && selectedId === 6 &&
                     <>
                         <IntervieweeInfo>
                             <InfoBlock className="top-[17%] left-[4%]">
